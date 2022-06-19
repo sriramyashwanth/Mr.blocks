@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D Controls;
+    public GameObject Game_won_pannel;
+    private bool isgamWon;
 
     public float speed;
     void Start()
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.tag == "Finish")
         {
+            Game_won_pannel.SetActive(true);
             Debug.Log("level complaeted");
         }
         
